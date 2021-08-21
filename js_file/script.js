@@ -1,7 +1,7 @@
 const memoriCost = document.getElementById('memmory-cost');
 const storageCost = document.getElementById('storage-cost');
 const deleveryCharge=document.getElementById('delevery-charge');
-const fixtedPrice = document.getElementById('fixt-price')
+const fixtedPrice = document.getElementById('fixt-price');
 const total = document.getElementById('total');
 
  
@@ -10,10 +10,10 @@ function productDefaultPrice(amount3){
     const memoriCost = document.getElementById('memmory-cost');
     let product2 = memoriCost.innerText;
     if(amount3==true){
-        product2 = '0'
+        product2 = '0';
     }
     else if(amount3 == false){
-        product2 = '180'
+        product2 = '180';
     }
     memoriCost.innerText = product2;
 }
@@ -66,7 +66,7 @@ document.getElementById('cost').addEventListener('click',function(){
 
 //total taka
 function updateTotal(){
-    const fixtedPric = parseFloat(fixtedPrice.innerText)
+    const fixtedPric = parseFloat(fixtedPrice.innerText);
     const laptopPrice = parseFloat(memoriCost.innerText);
     const ssdPrice = parseFloat(storageCost.innerText);
     const freeShippig = parseFloat(deleveryCharge.innerText);
@@ -80,7 +80,7 @@ document.getElementById('cupon').addEventListener('click', function(){
     const myRe = "stevekaku";
     const coupon = myRe.trim();
     const input = document.getElementById('promo-code');
-    const inputefild = input.value
+    const inputefild = input.value;
     if(inputefild.toUpperCase() == coupon.toUpperCase()) {
        totalDiscountTk =  total.innerText - total.innerText * 0.2;
        document.getElementById('promotcode-totalTaka').innerText = totalDiscountTk;
